@@ -34,3 +34,9 @@ add constraint fk_affecter_type
 foreign key(id_type)
 references type(id_type);
 
+INSERT INTO `tpsecu`.`type` (`name_type`) VALUES ('concert');
+INSERT INTO `tpsecu`.`type` (`name_type`) VALUES ('spectacle');
+INSERT INTO `tpsecu`.`type` (`name_type`) VALUES ('vernissage');
+
+INSERT INTO `tpsecu`.`role` (`name_role`) VALUES ('utilisateur');
+INSERT INTO `tpsecu`.`role` (`name_role`) VALUES ('administrateur');
