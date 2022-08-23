@@ -7,13 +7,15 @@
         private ?string $nom_event;
         private ?string $desc_event;
         private ?string $date_event;
+        private ?int $id_type;
         /*---------------------------------------------
                         Constructeur
         -----------------------------------------------*/
-        public function __construct(?string $nom, ?string $desc, ?string $date){
+        public function __construct(?string $nom, ?string $desc, ?string $date, ?int $type){
             $this->nom_event = $nom;
             $this->desc_event = $desc;
             $this->date_event = $date;
+            $this->id_type = $type;
         }
         /*---------------------------------------------
                         Getter et Setter
@@ -30,6 +32,9 @@
         public function getDateEvent():?string{
             return $this->date_event;
         }
+        public function getIdType():?int{
+            return $this->id_type;
+        }
 
         public function setIdEvent(?int $id):void{
             $this->id_event = $id;
@@ -42,6 +47,9 @@
         }
         public function setDateEvent(?string $date):void{
             $this->date_event = $date;
+        }
+        public function setIdType(?int $type):void{
+            $this->id_type = $type;
         }
     }
 ?>

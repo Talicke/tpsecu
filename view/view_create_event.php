@@ -15,7 +15,9 @@
         <p><textarea name="desc_event"></textarea></p>
         <p>Date de l'évenement : </p>
         <p><input type="date" name="date_event"></p>
-        <p><input type="submit" value="Ajouter" name="create"></p>
+        <p>Type d'evenement : </p>
+        <p><select name='selectType' id='selectType'>
+
     </form>
     
 </body>
