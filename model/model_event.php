@@ -11,7 +11,7 @@
                         Constructeur
         -----------------------------------------------*/
         public function __construct(?string $nom, ?string $desc, ?string $date){
-            $this->nom_article = $nom;
+            $this->nom_event = $nom;
             $this->desc_event = $desc;
             $this->date_event = $date;
         }
@@ -27,6 +27,10 @@
         public function getDescEvent():?string{
             return $this->desc_event;
         }
+        public function getDateEvent():?string{
+            return $this->date_event;
+        }
+
         public function setIdEvent(?int $id):void{
             $this->id_event = $id;
         }
@@ -35,6 +39,9 @@
         }
         public function setDescEvent(?string $desc):void{
             $this->desc_event = $desc;
+        }
+        public function setDateEvent(?string $date):void{
+            $this->date_event = $date;
         }
     }
 ?>
