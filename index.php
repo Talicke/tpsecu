@@ -16,5 +16,9 @@
         case $path === '/Tpsecu/addEvent' :
             include "./ctrl/ctrl_create_event.php";
             break;
+
+        case $path === '/Tpsecu/' :
+            include "./ctrl/ctrl_show_event.php";
+            break;
         }
 ?>

@@ -23,12 +23,13 @@
                 die('Erreur : '.$e->getMessage());
             }
         }
-        public function showAllArticle(object $bdd):?array{
+        public function showAllEvent(object $bdd):?array{
             try{
                 $req = $bdd->prepare('SELECT id_event, nom_event, 
-                desc_event, date_event FROM evenement');
+                desc_event, date_event, name_type FROM evenement, tpsecu.type WHERE
+                evenement.id_type = tpsecu.type.id_type');
                 $req->execute();
-                $data = $req->fetchAll(PDO::FETCH_ASSOC);
+                $data = $req->fetchAll(PDO::FETCH_OBJ);
                 return $data;
             }
             catch(Exception $e)
