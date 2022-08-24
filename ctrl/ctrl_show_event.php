@@ -8,15 +8,24 @@
     $events = $event->showAllEvent($bdd);
 
     foreach($events as $value){
-        echo '<div>
-            <p>'.$value->nom_event.'</p>
-            <p>Description de l\'evenement : </p>
-            <p>'.$value->desc_event.'</p>
-            <p>Date de l\'evenement :</p>
-            <p>'.$value->date_event.'</p>
-            <p>Type d\'evenement : </p>
-            <p>'.$value->name_type.'</p>
+        $date = date("d/m/Y", strtotime($value->date_event));
+        echo '           
+            <div class="card">
+                <div class="card-title">
+                    <h4>'.$value->nom_event.'</h4>
+                </div>
+                <div class="card-body">
+                    <p>
+                        '.$value->desc_event.'
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p>
+                        <span>'.$date.'</span><span>'.$value->name_type.'
+                    </p>
+                </div>
             </div>';
+            
     }
 
 

@@ -1,7 +1,6 @@
 <?php
     include './utils/function.php';
 
-
     session_start();
 
     $_SESSION['id_role'] = 2 ;
@@ -21,4 +20,5 @@
             include "./ctrl/ctrl_show_event.php";
             break;
         }
+        
 ?>
